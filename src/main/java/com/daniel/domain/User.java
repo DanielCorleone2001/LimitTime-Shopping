@@ -4,12 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 /**
  * @Package: com.daniel.domain
  * @ClassName: User
  * @Author: daniel
  * @CreateTime: 2021/3/28 18:38
- * @Description:
+ * @Description: 和数据库中属性一致的用户类
  */
 
 @AllArgsConstructor
@@ -17,7 +19,19 @@ import lombok.NoArgsConstructor;
 @Data
 public class User {
 
-    private int id;
+    private Long id;
 
-    private String name;
+    private String nickname;
+
+    private String password;
+
+    private String salt;
+
+    private String head;
+
+    private Date registerDate;
+
+    private Date lastLoginDate;
+
+    private Integer loginCount;
 }

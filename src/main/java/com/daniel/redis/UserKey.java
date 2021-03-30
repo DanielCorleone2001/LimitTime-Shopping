@@ -1,5 +1,7 @@
 package com.daniel.redis;
 
+import javax.jws.soap.SOAPBinding;
+
 /**
  * @Package: com.daniel.redis
  * @ClassName: UserKey
@@ -9,14 +11,16 @@ package com.daniel.redis;
  */
 public class UserKey extends BasePrefix{
 
-    private UserKey(String prefix) {
+    public static final int TOKEN_EXPIRE = 3600 * 24 * 2;
+
+    public static UserKey token = new UserKey(TOKEN_EXPIRE,"tk");
+
+    public UserKey(String prefix) {
         super(prefix);
     }
-    public static UserKey getById = new UserKey("id");
-    public static UserKey getByName = new UserKey("name");
 
-    @Override
-    public int expireSeconds() {
-        return 0;
+    public UserKey(int expireSeconds, String prefix) {
+        super(expireSeconds, prefix);
     }
+
 }

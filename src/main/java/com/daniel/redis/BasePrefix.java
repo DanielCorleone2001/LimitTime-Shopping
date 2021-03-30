@@ -53,4 +53,13 @@ public abstract class BasePrefix implements KeyPrefix{
         String className = getClass().getSimpleName();
         return className+" : "+prefix;
     }
+
+    /**
+     * 获取过期时间，0为默认永不过期
+     * @return
+     */
+    public int expireSeconds() {
+        return expireSeconds;
+    }
+
 }
