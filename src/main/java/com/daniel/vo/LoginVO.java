@@ -1,8 +1,8 @@
 package com.daniel.vo;
 
-import com.sun.istack.internal.NotNull;
+import com.daniel.validator.IsMobile;
+import javax.validation.constraints.NotNull;
 import lombok.Data;
-import lombok.ToString;
 import org.hibernate.validator.constraints.Length;
 
 /**
@@ -14,13 +14,18 @@ import org.hibernate.validator.constraints.Length;
  */
 
 @Data
-@ToString
 public class LoginVO {
 
     @NotNull
+    @IsMobile
     private String mobile;
 
     @NotNull
     @Length(min = 32)
     private String password;
+
+    @Override
+    public String toString() {
+        return "LoginVo [mobile=" + mobile + ", password=" + password + "]";
+    }
 }

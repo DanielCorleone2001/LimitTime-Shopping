@@ -1,0 +1,38 @@
+package com.daniel.domain;
+
+import lombok.Data;
+
+import java.util.Date;
+
+/**
+ * @Package: com.daniel.domain
+ * @ClassName: OrderInfo
+ * @Author: daniel
+ * @CreateTime: 2021/4/1 12:42
+ * @Description: 订单详情
+ */
+@Data
+public class OrderInfo {
+
+    private Long id;
+
+    private Long userId;
+
+    private Long goodsId;
+
+    private Long  deliveryAddrId;
+
+    private String goodsName;
+
+    private Integer goodsCount;
+
+    private Double goodsPrice;
+
+    private Integer orderChannel;
+
+    private Integer status;
+
+    private Date createDate;
+
+    private Date payDate;
+}

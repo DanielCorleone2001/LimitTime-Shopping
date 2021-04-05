@@ -1,6 +1,6 @@
-package com.daniel.redis;
+package com.daniel.redis.key;
 
-import javax.jws.soap.SOAPBinding;
+import com.daniel.redis.BasePrefix;
 
 /**
  * @Package: com.daniel.redis
@@ -9,7 +9,7 @@ import javax.jws.soap.SOAPBinding;
  * @CreateTime: 2021/3/28 21:00
  * @Description:
  */
-public class UserKey extends BasePrefix{
+public class UserKey extends BasePrefix {
 
     public static final int TOKEN_EXPIRE = 3600 * 24 * 2;
 

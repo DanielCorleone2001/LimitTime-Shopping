@@ -2,7 +2,6 @@ package com.daniel.controller;
 
 import com.daniel.domain.User;
 import com.daniel.redis.RedisService;
-import com.daniel.redis.UserKey;
 import com.daniel.result.CodeMsg;
 import com.daniel.result.DataResult;
 import com.daniel.service.UserService;
@@ -11,8 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.jws.soap.SOAPBinding;
 
 /**
  * @Package: com.daniel.controller

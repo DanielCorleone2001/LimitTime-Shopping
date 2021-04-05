@@ -15,6 +15,11 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface UserDao {
 
+    /**
+     * 从数据库中，通过ID来获取到用户对象
+     * @param id 用户的ID，即电话号码
+     * @return 对应的用户对象
+     */
     @Select("select * from miaosha_user where id = #{id}")
-    User getById(@Param("id")long id);
+    User getUserById(@Param("id")long id);
 }

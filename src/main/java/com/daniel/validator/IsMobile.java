@@ -30,7 +30,7 @@ public @interface IsMobile {
      * 默认的输出信息
      * @return
      */
-    String message() default "手机号码格式错误";
+    String message() default "手机号码格式错误???";
 
     /**
      *

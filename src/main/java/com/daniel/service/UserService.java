@@ -4,7 +4,7 @@ import com.daniel.dao.UserDao;
 import com.daniel.domain.User;
 import com.daniel.exception.GlobalException;
 import com.daniel.redis.RedisService;
-import com.daniel.redis.UserKey;
+import com.daniel.redis.key.UserKey;
 import com.daniel.result.CodeMsg;
 import com.daniel.util.MD5Util;
 import com.daniel.util.UUIDUtil;
@@ -40,7 +40,7 @@ public class UserService {
      * @return  返回的结果对象
      */
     public User getUserById ( long id ) {
-        return userDao.getById(id);
+        return userDao.getUserById(id);
     }
 
     /**
@@ -89,7 +89,7 @@ public class UserService {
         }
 
         String mobile = loginVO.getMobile();
-        //明文面膜
+        //明文密码
         String fromPass = loginVO.getPassword();
         //通过电话号码获取到对象
         User user = getUserById(Long.parseLong(mobile));

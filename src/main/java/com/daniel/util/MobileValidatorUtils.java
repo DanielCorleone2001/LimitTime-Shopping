@@ -17,7 +17,7 @@ public class MobileValidatorUtils {
     /**
      * 电话号码的正则表达式
      */
-    private static final Pattern mobile_pattern = Pattern.compile("1\\d(10)");
+    private static final Pattern mobile_pattern = Pattern.compile("1\\d{10}");
 
     /**
      * 检验输入的号码是否是正确的
